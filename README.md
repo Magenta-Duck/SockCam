@@ -11,7 +11,7 @@ SockCam is an android application that provides a real-time socket-based camera 
 
 * [Requirements](doc/requirements.md)
 * Specification(s):
-  * [Phase 1: Minimum Viable Product](doc/specification-001-mvp.md)
+  * [Phase 1: Minimum Viable Product - DRAFT](doc/specification-001-mvp.md)
 
 ## Get Involved
 
