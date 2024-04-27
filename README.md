@@ -1,15 +1,15 @@
 SockCam
 =======
 
-SockCam is an android application that provides a Socket-based camera client for connecting to and being remotely controlled by another device.
+SockCam is an android application that provides a real-time socket-based camera client for connecting to and being remotely controlled by another device.
 
 ## Current Status
 
-**Requirements**.  We are still working on the initial project requirements.  Once those are settled on we will move forwards creating a specification from them.  The project will be specified in discrete manageable phases, with an eye on the future requirements.
+**Requirements**.  The initial requirements have now been specified and we are now working on the first specification.  The project will be specified in discrete manageable phases, with an eye on the future requirements.
 
 ## Documentation
 
-* [Requirements DRAFT](doc/requirements.md)
+* [Requirements](doc/requirements.md)
 
 ## Get Involved
 
