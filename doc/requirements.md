@@ -41,7 +41,11 @@ The application will make a realtime persistant connection to the specified serv
 
 The connection needs to always be maintained where possible, therefore automatic re-connection will be necessary.
 
+On startup we need to automatically connect to the server if we have details stored.
+
 ### Messages
+
+Can recieved one of the messages below from the server and take the requested action.
 
 #### Take a Photo
 
@@ -59,7 +63,7 @@ A checksum should be used to verify that the photo has been correctly recieved b
 
 Sending photos should take the lowest priority over other actions (taking more photos, configuring settings, and so on).  Therefore a queue system will be needed so more photos can be taken and those are transferred.
 
-Any meta-data associated with the photo and the device will be transferred along with the photo.
+Any meta-data associated with the photo and the device will be transferred along with the photo, potentially encoded within the file.
 
 #### Camera Settings
 
@@ -73,9 +77,19 @@ Set the device metadata remotely.
 
 We want to have a visual indicator on the device to show what the application is currently doing.
 
+### Audible Indicator
+
+When a photo is taken, optionally play a sound (e.g. a shutter).
+
 ### Live Preview
 
 We want to show a live preview of the camera's view - but as this will be a reasonable power drain, and affect lighting, this should be optional.
+
+### Manually Take Photo
+
+An unmounted camera might need to be used to capture certain information/shots, therefore we'll need the option to trigger taking a photo from the phone itself as timing and proximity to the item will be key to getting a good photo.
+
+In this case, the photo should be sent to the server as if in response to a request to send a photo.  We may re-evaluate exactly how this works at a later date.
 
 ## Non-Functional Requirements
 
@@ -89,17 +103,17 @@ We don't have a specific version of Android targetted - we should err on the sid
 
 ### Robust and Fault Tolerant
 
-The application must robust and fault tolerant, a significant effort needs to go into ensuring this is the case: framework selection, error logging system, automated tests, network connections, device compatibility verification, resource usage monitoring, exception handling, message verification, and so on all play a part.
+The application must be robust and fault tolerant as it will be used on a large scale, a significant effort needs to go into ensuring this is the case: framework selection, error logging system, automated tests, network connections, device compatibility verification, resource usage monitoring, exception handling, message verification, and so on all play a part.
 
 ### Well Documented and Maintainable
 
-Maintainability is more important than other metrics like performance unless a critical path is identified that needs optimising.  As we will be a disparate team of developers, with people joining and leaving the project, it's important that onboarding and maintainability is good.
+Maintainability is more important than other metrics like performance unless a critical path is identified that needs optimising.  As we will be a disparate team of developers, with people joining and leaving the project, it's important that onboarding and maintainability is strong.
 
 ### Network Connectivity
 
 Wifi will be assumed to always be available.
 
-Needs to work on just a LAN with no Internet.  Many charity shops have poor internet connectivity, that is also used for a variety of other tasks, therefore we don't want to be wasting bandwidth sending high resolution images online then downloading them again on a different device in the same location.
+Needs to be able to work on just a LAN with no Internet, or with the Internet if desired.  Many charity shops have poor internet connectivity, that is also used for a variety of other tasks, therefore we don't want to be wasting bandwidth sending high resolution images online then downloading them again on a different device in the same location.
 
 ### Camera Configuration
 
@@ -115,7 +129,7 @@ While we will, for the most part, be operating the devices tethered to USB power
 
 ### Easy to Use: Plug & Play
 
-The user-interface on the device needs to be really clear and walk the user through any tasks they need to do.  Due to the spread-out nature of charity shops, technical support will rarely be available.
+The user-interface on the device needs to be really clear and walk the user through any tasks they need to do.  Due to the spread-out nature of charity shops, technical support will rarely be directly available.
 
 ### Google Play Store
 
