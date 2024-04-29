@@ -18,27 +18,36 @@ In-short, the funcionality we'll initially implement will be to connect to a ser
 ### 1. Application Start
 
 1.1. Open *Live Camera Preview*.
+
 1.2. Check to see if we have any stored server connection details, if so *Open Connection*
 Otherwise open *Server Connection Input*.
 
 ### 2. Server Connection Input
 
 2.1. Show a screen asking the user for the IP address and port of the server to connect to.
+
 2.2. Store the server details on the device.
+
 2.3. Connect button to *Open Connection*.
+
 2.4. Close button to hide this screen.
 
 ### 3. Live Camera Preview
 
 3.1. Open access to the camera and show a live preview of the camera in as large a portion of the display as possible.
+
 3.2. Settings button to open *Server Connection Input*.
 
 ### 4. Open Connection
 
 4.1. Close any existing connections.
+
 4.2. Open a TCP/IP socket connection to the specified server.
+
 4.3. Update the *Visual Indicator* to reflect the status of the connection.
+
 4.4. If there was a problem opening or maintaining the connection, show *Connection Error*.
+
 4.5. Start listening for messages from the server.
 
 ### 5. Application Close
@@ -48,11 +57,13 @@ Otherwise open *Server Connection Input*.
 ### 6. Close Connection
 
 6.1. Immediately close the TCP/IP socket connection to the server.
+
 6.2. Update the *Visual Indicator* to reflect the status of the connection.
 
 ### 7. Visual Indicator
 
 7.1. Traffic light icon to represent the status of the connection to the server:
+
   * Red: No connection
   * Green: Connection active.
 
@@ -61,6 +72,7 @@ Otherwise open *Server Connection Input*.
 ### 8. Connection Error
 
 8.1. Show a screen that has the connection details and any associated error messages.
+
 8.2. "Server Connection" button to show *Server Connection Input*.
 
 ### 9. Message: TAKE_PHOTO
@@ -69,7 +81,9 @@ TAKE_PHOTO:
   - message_id: UUID - The unique ID of the message.
 
 9.2. Upon reciving a "TAKE_PHOTO" message from the server, use the camera to take a photo.
+
 9.3. Store the photo on the device in the phone's gallery.
+
 9.4. Send the photo back to the server with *Message: PHOTO*.
 
 ### 10. Message: PHOTO
