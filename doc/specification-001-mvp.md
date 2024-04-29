@@ -83,6 +83,35 @@ PHOTO:
 
 NOTE: This is a best guess without looking at any implementation specifics, e.g. socket frameworks.  
 
+## Technologies
+
+### Development Environment
+
+#### [Kotlin](https://kotlinlang.org/) using [Android Studio](https://developer.android.com/studio)
+
+Now [Kotlin has become the standard for developing Android applications](https://developer.android.com/kotlin), this seems like the obvious choice:
+
+* The recommended approach for new Android projects - learning resources, tooling, etc. all support it.
+* We don't need to support any other platforms like iOS.
+* Leverages the full power of Java.
+* Kotlin's clarity, conciseness, default of non-mutability, and it's handling of concurrency make it particularly well-suited for multi-developer environments.
+
+### Application Framework
+
+#### [Android Jetpack](https://developer.android.com/jetpack)
+
+* Jetpack is now the recommended way to build new Android applications - learning resources, tooling, etc. all support it.
+* Modern, reactive, reusable, UI framework with [Jetpack Compose](https://developer.android.com/develop/ui/compose).
+* Provides compatibility with older devices, which is a big help in our particular use-case.
+
+### Realtime Networking
+
+#### [Socket.IO](https://socket.io/)
+
+* With auto-reconnection, heartbeat, ack, and transport failover - provides a robust connection, something that's very important for our use-case.
+* Support for a [wide variety of platforms](https://socket.io/docs/v4/).  While the mobile app will only be in Kotlin/Android, we want to support interaction with a wide variety of implementations for servers, desktop, and other mobile apps - depending on the user's needs.
+* [Scalable using adapters](https://socket.io/docs/v4/adapter/) - we want to support large scale operations in the future.
+
 ## Unknowns
 
 These are things that need to be researched / experimented with before implementation begins in earnest:
