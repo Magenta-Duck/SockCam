@@ -133,3 +133,9 @@ These are things that need to be researched / experimented with before implement
 ### Device Unique Identifer
 
 Need to look into whether there is a unique identifier we can obtain for a device, or whether we need to generate and store one ourselves.
+
+## Known Issues
+
+### Message Routing and Client Roles
+
+Currently there is no means of appropriately routing messages to clients.  Having clients identify the roles they play, e.g. "CAMERA", "TRIGGER", "IMAGE PROCESSOR", etc. along with grouping/namespace's would be the obvious solution - but is outside the scope of this phase.  For now every message will be sent to all clients, and it's up to the client if they want to deal with it or not.
