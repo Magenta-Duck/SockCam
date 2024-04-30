@@ -126,6 +126,16 @@ Now [Kotlin has become the standard for developing Android applications](https:/
 * Support for a [wide variety of platforms](https://socket.io/docs/v4/).  While the mobile app will only be in Kotlin/Android, we want to support interaction with a wide variety of implementations for servers, desktop, and other mobile apps - depending on the user's needs.
 * [Scalable using adapters](https://socket.io/docs/v4/adapter/) - we want to support large scale operations in the future.
 
+## Testing
+
+### Automated Tests
+
+We will not provide any automated testing in this phase as making sure the overall architecture is right is a goal of the current phase and therefore significant changes are possible, which would require tests to be re-written.
+
+### Server
+
+We will still need a server to connect to, and something to issue messages to SockCam to trigger taking photos.  As we're using Socket.IO, by the easiest way to do so is to create a simple NodeJS project.  That will be in a separate repo, and may ultimately be replaced by a Kotlin/Java version in the future.
+
 ## Unknowns
 
 These are things that need to be researched / experimented with before implementation begins in earnest:
