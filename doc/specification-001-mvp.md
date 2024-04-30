@@ -11,7 +11,7 @@ The first phase of the project will focus on getting an end-to-end minimum viabl
 * Gain a working knowledge of the technologies and frameworks being used.
 * Provide a foundation on which to build upon in future phases.
 
-In-short, the funcionality we'll initially implement will be to connect to a server and listen for messages to take photos, take the photo then send it back to the server.
+In-short, the functionality we'll initially implement will be to connect to a server and listen for messages to take photos, take the photo then send it back to the server.
 
 ## Functionality
 
