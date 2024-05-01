@@ -38,6 +38,8 @@ Otherwise open *Server Connection Input*.
 
 3.2. Settings button to open *Server Connection Input*.
 
+3.3. Ensure application has permissions for using the camera.
+
 ### 4. Open Connection
 
 4.1. Close any existing connections.
@@ -49,6 +51,8 @@ Otherwise open *Server Connection Input*.
 4.4. If there was a problem opening or maintaining the connection, show *Connection Error*.
 
 4.5. Start listening for messages from the server.
+
+4.6. Ensure application has permissions for using the network.
 
 ### 5. Application Close
 
@@ -67,7 +71,7 @@ Otherwise open *Server Connection Input*.
   * Red: No connection
   * Green: Connection active.
 
-7.2. Have a "Status" text label that displays a short messag so that we can keep the user informed as to what the application is currently doing (e.g. Taking Photo, Sending Photo, Idle).
+7.2. Have a "Status" text label that displays a short message so that we can keep the user informed as to what the application is currently doing (e.g. Taking Photo, Sending Photo, Idle).
 
 ### 8. Connection Error
 
