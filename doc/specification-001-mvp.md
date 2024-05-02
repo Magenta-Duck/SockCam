@@ -95,6 +95,7 @@ TAKE_PHOTO:
 PHOTO:
   - message_id: UUID - The unique ID of the message this is in response to.
   - device_id: ? - The unique identifier of the device (to be determined).
+  - filename: String - The filename of the photo.
   - content_type: String - The MIME Content Type of the image, e.g. image/jpeg
   - content_length: Big Int - The size of the content in bytes.
   - content: Blob - The photo binary data.
